@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Axeena ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ff7eb3;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        width: 300px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+        color: #e63946;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #yes {
+        background: #e63946;
+        color: white;
+    }
+
+    #no {
+        background: #777;
+        color: white;
+        position: absolute;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card" id="card">
+    <h2>Will you be my Valentine, Axeena? ❤️</h2>
+
+    <button id="yes" onclick="yesClick()">Yes 💖</button>
+    <button id="no" onmouseover="moveNo()">No 🙈</button>
+</div>
+
+<script>
+    function moveNo() {
+        const noBtn = document.getElementById("no");
+        noBtn.style.left = Math.random() * 80 + "%";
+        noBtn.style.top = Math.random() * 80 + "%";
+    }
+
+    function yesClick() {
+        document.getElementById("card").innerHTML = `
+            <h2>Yayyy! 💖</h2>
+            <p>You just made me very happy 😍</p>
+            <div style="font-size:70px;">🐱💋</div>
+            <p>A cat sends you a kiss!</p>
+        `;
+    }
+</script>
+
+</body>
+</html>
